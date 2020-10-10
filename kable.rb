@@ -2,16 +2,16 @@
 class Kable < Formula
   desc "Manage kubernetes resource. GitOps galore!"
   homepage "https://github.com/redradrat/kable"
-  version "0.0.9"
+  version "0.1.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/redradrat/kable/releases/download/v0.0.9/kable_0.0.9_Darwin_x86_64.tar.gz"
-    sha256 "8a6243467add1a7618a7a14dee2dbd832d91faf9f695424972bd8bd58e8c9625"
+    url "https://github.com/redradrat/kable/releases/download/v0.1.0/kable_0.1.0_Darwin_x86_64.tar.gz"
+    sha256 "214cb85244d702b758e0e87ca4f0794ba0e381974400f8cd2ac7adf76f45bbe7"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/redradrat/kable/releases/download/v0.0.9/kable_0.0.9_Linux_x86_64.tar.gz"
-      sha256 "fd8f75b7f2241650830d4c4413882a9a531d89fa47003596fc389d1c2b5ff3dc"
+      url "https://github.com/redradrat/kable/releases/download/v0.1.0/kable_0.1.0_Linux_x86_64.tar.gz"
+      sha256 "29a69598a05f2cb8f8c89ad765b4dbd5f3b2cac9cd4fdde85cf1137610af3b2c"
     end
   end
   
