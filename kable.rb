@@ -2,16 +2,16 @@
 class Kable < Formula
   desc "Manage kubernetes resource. GitOps galore!"
   homepage "https://github.com/redradrat/kable"
-  version "0.7.0"
+  version "0.7.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/redradrat/kable/releases/download/v0.7.0/kable_0.7.0_Darwin_x86_64.tar.gz"
-    sha256 "8cb5f9fb76a537f730302d190513c3ae1f9a5f3b10c3140c8493f0e282d727f8"
+    url "https://github.com/redradrat/kable/releases/download/v0.7.1/kable_0.7.1_Darwin_x86_64.tar.gz"
+    sha256 "4f3fdc96f4152f864a174f9bfa6c0b4dc5c2ac85a205da93858e75d3925ef84a"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/redradrat/kable/releases/download/v0.7.0/kable_0.7.0_Linux_x86_64.tar.gz"
-      sha256 "b8a10c754db440f3a60391e50fdb233c4f39dfb9bf89b885c8a6a3719279c499"
+      url "https://github.com/redradrat/kable/releases/download/v0.7.1/kable_0.7.1_Linux_x86_64.tar.gz"
+      sha256 "613c620a60121c674e95f861c3d583cce835d3b4a5366eae000940417df15fe6"
     end
   end
   
@@ -21,5 +21,11 @@ class Kable < Formula
 
   def install
     bin.install "kable"
+    output = Utils.popen_read("#{bin}/kable completion bash")
+    (bash_completion/"kable").write output
+    output = Utils.popen_read("#{bin}/kable completion zsh")
+    (zsh_completion/"_kable").write output
+    output = Utils.popen_read("#{bin}/kable completion fish")
+    (fish_completion/"kable.fish").write output
   end
 end
