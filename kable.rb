@@ -5,12 +5,12 @@
 class Kable < Formula
   desc "Manage kubernetes resource. GitOps galore!"
   homepage "https://github.com/redradrat/kable"
-  version "0.8.0"
+  version "0.8.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/redradrat/kable/releases/download/v0.8.0/kable_0.8.0_Darwin_arm64.tar.gz"
-      sha256 "a62bec7e6940a3fb6691a24bb458d4c4435356b02659aec3bfca6628dcaf1e34"
+      url "https://github.com/redradrat/kable/releases/download/v0.8.2/kable_0.8.2_Darwin_arm64.tar.gz"
+      sha256 "bfa1547427533ddec1c3ca17d64171a6a73e50c25578e7ca52cb08831c02d19a"
 
       def install
         bin.install "kable"
@@ -23,8 +23,8 @@ class Kable < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/redradrat/kable/releases/download/v0.8.0/kable_0.8.0_Darwin_x86_64.tar.gz"
-      sha256 "52c72c5f0d8bff5d749df852ab1f603f3c6d4677c65d9fcbd89f7d498bf84302"
+      url "https://github.com/redradrat/kable/releases/download/v0.8.2/kable_0.8.2_Darwin_x86_64.tar.gz"
+      sha256 "9083224c489c060854d8366a981a49c9a10f5564df57ac136214fd01ce119f7c"
 
       def install
         bin.install "kable"
@@ -40,8 +40,8 @@ class Kable < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/redradrat/kable/releases/download/v0.8.0/kable_0.8.0_Linux_arm64.tar.gz"
-      sha256 "d9536f4a083c8f316ade7159e593fd940474bb829594f74131b02a0de6e69a51"
+      url "https://github.com/redradrat/kable/releases/download/v0.8.2/kable_0.8.2_Linux_arm64.tar.gz"
+      sha256 "0f550a3951ff797180615400ea573a745d6fa62a5f5ffb737e279c2ccca025f0"
 
       def install
         bin.install "kable"
@@ -54,8 +54,8 @@ class Kable < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/redradrat/kable/releases/download/v0.8.0/kable_0.8.0_Linux_x86_64.tar.gz"
-      sha256 "fcb5e99b31022e2e96b045560d4325cad97d8f66b5be7b2e908b1343f9d88149"
+      url "https://github.com/redradrat/kable/releases/download/v0.8.2/kable_0.8.2_Linux_x86_64.tar.gz"
+      sha256 "f055ac509ea43f52d7435b0713e1454a9f35d8846335d70c147d37c3e61e5918"
 
       def install
         bin.install "kable"
