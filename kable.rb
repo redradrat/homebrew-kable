@@ -5,12 +5,12 @@
 class Kable < Formula
   desc "Manage kubernetes resource. GitOps galore!"
   homepage "https://github.com/redradrat/kable"
-  version "0.8.5"
+  version "0.8.6"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/redradrat/kable/releases/download/v0.8.5/kable_0.8.5_Darwin_arm64.tar.gz"
-      sha256 "a990e4f6224408bcc41f094635fc39ff17ce80885865942f4d6d9a1dfc558a2a"
+    if Hardware::CPU.intel?
+      url "https://github.com/redradrat/kable/releases/download/v0.8.6/kable_0.8.6_Darwin_x86_64.tar.gz"
+      sha256 "0d98313ad5ad35205c4c9a2f05a90e21911aea1bc5124aa14cee41ba3ec5eeb4"
 
       def install
         bin.install "kable"
@@ -22,9 +22,9 @@ class Kable < Formula
         (fish_completion/"kable.fish").write output
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/redradrat/kable/releases/download/v0.8.5/kable_0.8.5_Darwin_x86_64.tar.gz"
-      sha256 "252b35adba9038bd1c570ff9ffd389850c582443cad37492e8bfbbba705fa47c"
+    if Hardware::CPU.arm?
+      url "https://github.com/redradrat/kable/releases/download/v0.8.6/kable_0.8.6_Darwin_arm64.tar.gz"
+      sha256 "894e267844dad0c81de238c3b4e8e21e0bdf2a0c215e6363926f9184a260d0eb"
 
       def install
         bin.install "kable"
@@ -40,8 +40,8 @@ class Kable < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/redradrat/kable/releases/download/v0.8.5/kable_0.8.5_Linux_arm64.tar.gz"
-      sha256 "74eeace05084a559714e9074df0e7a7e936a09f2f7775a6f881a33e71543ced9"
+      url "https://github.com/redradrat/kable/releases/download/v0.8.6/kable_0.8.6_Linux_arm64.tar.gz"
+      sha256 "815267082ffb9f095bf2f2b07be2f047da97641d2bdf599e4daacf10091daabc"
 
       def install
         bin.install "kable"
@@ -54,8 +54,8 @@ class Kable < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/redradrat/kable/releases/download/v0.8.5/kable_0.8.5_Linux_x86_64.tar.gz"
-      sha256 "7833e7ffe02a2c2d3303977a02870f517c312460dd44cded9d6e9ed32b9b93da"
+      url "https://github.com/redradrat/kable/releases/download/v0.8.6/kable_0.8.6_Linux_x86_64.tar.gz"
+      sha256 "c344658038bb26f5d5418da763ef4689af3da4d711e509f44ec9dd8497a38114"
 
       def install
         bin.install "kable"
